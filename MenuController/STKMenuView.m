@@ -87,6 +87,10 @@
 }
 - (void)setVisible:(BOOL)menuVisible animated:(BOOL)animated
 {
+    if (menuVisible == _visible && menuVisible) {
+        return;
+    }
+    
     _visible = menuVisible;
     if(menuVisible) {
         
