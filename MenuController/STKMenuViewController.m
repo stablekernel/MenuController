@@ -140,7 +140,7 @@
     // this needs to be added
     _menuGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                      action:@selector(screenTap:)];
-    [_menuGestureRecognizer setNumberOfTouchesRequired:2];
+    [_menuGestureRecognizer setNumberOfTouchesRequired:3];
     [_menuGestureRecognizer setDelegate:self];
     [layoutView addGestureRecognizer:_menuGestureRecognizer];
     
