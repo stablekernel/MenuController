@@ -22,7 +22,7 @@
 
 @property (nonatomic, weak) id <STKMenuViewDelegate> delegate;
 @property (nonatomic, strong) NSArray *items;
-@property (nonatomic, getter = isVisible) BOOL visible;
+@property (nonatomic, getter = isVisible, readonly) BOOL visible;
 
 - (void)setVisible:(BOOL)menuVisible animated:(BOOL)animated;
 
