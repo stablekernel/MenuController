@@ -87,7 +87,10 @@
 }
 - (void)setVisible:(BOOL)menuVisible animated:(BOOL)animated
 {
-    _visible = menuVisible;
+    if (menuVisible == [self isVisible]) {
+        return;
+    }
+    
     if(menuVisible) {
         
         [self setItems:[[self delegate] itemsForMenuView:self]];
@@ -123,6 +126,11 @@
             [self setHidden:YES];
         }
     }
+}
+
+- (BOOL)isVisible
+{
+    return ![self isHidden];
 }
 
 + (float)minimumDiameter
